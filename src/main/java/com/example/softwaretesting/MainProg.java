@@ -118,50 +118,7 @@ public class MainProg {
 
     public static void main(String[] args)
     {
-
-        //pp cov
-        int arr[] =  {7,-1,0,4,12};
-        // 1 -2
-        /*System.out.println(kthSmallest(arr,0,arr.length-1,0));
-
-
-
-        arr= new int[]{0,-1}; //1 3 4 3 4 3 5 8
-        System.out.println(kthSmallest(arr,0,arr.length-1,2));
-        arr= new int[]{4,3,2,6,0,5}; // 1,3,4,3,5,6,7,5,6,7,5,6,5,6,7,5,6,5,8
-        System.out.println(kthSmallest(arr,0,arr.length-1,1));
-        arr= new int[]{4}; // 1,3,4,3,5,8 , side trip 1 3 5 8
-        System.out.println(kthSmallest(arr,0,arr.length-1,1));
-
-        //ec
-        arr= new int[]{8,9,6}; // 1,3,4,3,5,6,5,6,7,5,8
-        System.out.println(kthSmallest(arr,0,arr.length-1,1));
-        System.out.println(kthSmallest(arr,0,arr.length-1,4)); // 1-2*/
-
-
-        /*int[] b=new int[]{1,3,432,431,10};
-        binarySearch(b,0,b.length-1,30);
-        //EC
-        b=new int[]{3,6,10,14};
-        binarySearch(b,0,b.length-1,4);// 1 2 5 1 2 3 1 6
-
-        b=new int[]{3,6,10};
-        binarySearch(b,0,b.length-1,6);// 1 2 4
-
-    //PPc
-        b=new int[]{2,4,5,7,9,12};
-        System.out.println(binarySearch(b,0,b.length-1,7));// 1 2 4
-
-        b=new int[]{2,5,8,10,11,15,16,17};
-        System.out.println(binarySearch(b,0,b.length-1,9));// 1 2 5 1 2 3 1 2 3 1 6
-        b=new int[]{5};
-        System.out.println(binarySearch(b,0,b.length-1,4));// 1 2 5 1 6
-
-        b=new int[]{2,5,7};
-        System.out.println(binarySearch(b,0,b.length-1,1));// 1 2 5 1 2 5 1 6
-
-        b=new int[]{2,5,7};
-        System.out.println(binarySearch(b,0,b.length-1,7));// 1 2 3 1 2 4*/
-
+        
     }
 }
+
