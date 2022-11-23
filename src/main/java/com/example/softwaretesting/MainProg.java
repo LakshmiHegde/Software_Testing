@@ -308,6 +308,87 @@ public class MainProg {
         System.out.print("5 ");
         return false;
     }
+public static int sumOddLengthSubarrays(int arr[]) {
+        System.out.print("1 ");
+        int ans; 
+        int n = arr.length;
+        System.out.print("2 ");
+        for(int i = 0; i < n; i++) { 
+            System.out.print("3 ");
+            int start = i;
+            int end = n - i;
+            int total = (start + 1) * (end);
+            int odd = total / 2;
+            System.out.print("4 ");
+            if(total % 2 != 0) {
+                System.out.print("5 ");
+                odd++;
+            }
+			System.out.print("6 ");
+            ans += arr[i] * odd;
+            System.out.print("7 ");
+        }
+		System.out.print("8 ");
+        return ans;
+        
+    }
+
+
+public static int findMiddleIndex(int nums[]) {
+            System.out.print("1 ");
+        int n=nums.length;
+        int sum=0;
+        System.out.print("2 ");
+        for(int i=0;i<n;i++)
+        { 
+            System.out.print("3 ");
+           sum+=nums[i];
+           System.out.print("5 ");
+        }
+        
+        System.out.print("4 ");
+        int l_sum=0;
+        System.out.print("6 ");
+        for(int i=0; i<n;i++)
+        {   System.out.print("9 ");
+            if(l_sum==sum-nums[i])
+            {
+                System.out.print("8 ");
+                return i;
+            }
+            l_sum+=nums[i];
+            sum=sum-nums[i];
+            System.out.print("10 ");
+        }
+        System.out.print("7 ");
+        return -1;
+    }
+
+public static boolean findSubarrays(int n[]) {
+            System.out.print("1 ");
+        int k=n.length;
+        int a[]=new int[k-1];
+        System.out.print("2 ");
+        for(int i=1;i<k;i++)
+        {
+            System.out.print("3 ");
+            a[i-1]=n[i-1]+n[i];
+        }
+        System.out.print("4 ");
+        Arrays.sort(a);
+        System.out.print("5 ");
+        for(int i=0;i<k-2;i++)
+        {
+            System.out.print("6 ");
+            if(a[i]==a[i+1])
+            {
+                System.out.print("7 ");
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public static void main(String[] args)
     {
