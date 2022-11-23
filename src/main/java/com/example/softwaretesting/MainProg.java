@@ -308,6 +308,32 @@ public class MainProg {
         System.out.print("5 ");
         return false;
     }
+public static int sumOddLengthSubarrays(int arr[]) {
+        System.out.print("1 ");
+        int ans; 
+        int n = arr.length;
+        System.out.print("2 ");
+        for(int i = 0; i < n; i++) { 
+            System.out.print("3 ");
+            int start = i;
+            int end = n - i;
+            int total = (start + 1) * (end);
+            int odd = total / 2;
+            System.out.print("4 ");
+            if(total % 2 != 0) {
+                System.out.print("5 ");
+                odd++;
+            }
+			System.out.print("6 ");
+            ans += arr[i] * odd;
+            System.out.print("7 ");
+        }
+		System.out.print("8 ");
+        return ans;
+        
+    }
+
+
 
     public static void main(String[] args)
     {
