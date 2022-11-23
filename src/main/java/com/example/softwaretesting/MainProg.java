@@ -364,6 +364,31 @@ public static int findMiddleIndex(int nums[]) {
         return -1;
     }
 
+public static boolean findSubarrays(int n[]) {
+            System.out.print("1 ");
+        int k=n.length;
+        int a[]=new int[k-1];
+        System.out.print("2 ");
+        for(int i=1;i<k;i++)
+        {
+            System.out.print("3 ");
+            a[i-1]=n[i-1]+n[i];
+        }
+        System.out.print("4 ");
+        Arrays.sort(a);
+        System.out.print("5 ");
+        for(int i=0;i<k-2;i++)
+        {
+            System.out.print("6 ");
+            if(a[i]==a[i+1])
+            {
+                System.out.print("7 ");
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public static void main(String[] args)
     {
