@@ -334,6 +334,36 @@ public static int sumOddLengthSubarrays(int arr[]) {
     }
 
 
+public static int findMiddleIndex(int nums[]) {
+            System.out.print("1 ");
+        int n=nums.length;
+        int sum=0;
+        System.out.print("2 ");
+        for(int i=0;i<n;i++)
+        { 
+            System.out.print("3 ");
+           sum+=nums[i];
+           System.out.print("5 ");
+        }
+        
+        System.out.print("4 ");
+        int l_sum=0;
+        System.out.print("6 ");
+        for(int i=0; i<n;i++)
+        {   System.out.print("9 ");
+            if(l_sum==sum-nums[i])
+            {
+                System.out.print("8 ");
+                return i;
+            }
+            l_sum+=nums[i];
+            sum=sum-nums[i];
+            System.out.print("10 ");
+        }
+        System.out.print("7 ");
+        return -1;
+    }
+
 
     public static void main(String[] args)
     {
