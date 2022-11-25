@@ -459,7 +459,7 @@ public static int sumOddLengthSubarrays(int arr[])
         
 	//System.out.print("1 ");
         
-	int ans; 
+	int ans=0; 
         
 	int n = arr.length;
         
@@ -577,10 +577,266 @@ public static boolean findSubarrays(int n[])
         return false;
     }
 
+    public static int linearsearch(int[] arr,int key)
+    {
+        int n=arr.length;
+
+        for (int i=0;i<n;i++)
+        {
+            if(arr[i] == key)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args)
     {
         
+        
+        while (true)
+        {
+
+            System.out.println("----------Java basic Programs----------");
+
+            System.out.println("1. Binary Search \n"
+                    +"2. Linear Search\n"
+                    +"3. Anagrams\n"
+                    +"4. Loop present in linked list\n"
+                    +"5. Insertion sort \n"
+                    +"6. Kth Smallest \n"
+                    +"7. Sum Odd Length Subarrays\n"
+                    +"8. Find Middle Index\n"
+                    +"9. Find Subarrays\n"
+            );
+
+
+            System.out.println("Enter your choice: ");
+
+            Scanner sc= new Scanner(System.in);
+
+            int choice;
+
+            choice=sc.nextInt();
+
+            switch (choice)
+            {
+
+                case 1:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("BINARY SEARCH");
+
+                    int size;
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    int arr[]= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println("Enter key to be searched ");
+
+                    int key;
+
+                    key=sc.nextInt();
+
+                    System.out.println(binarySearch(arr,0,arr.length-1,key));
+
+                    break;
+                case 2:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("LINEAR SEARCH");
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println("Enter key to be searched ");
+
+                    key=sc.nextInt();
+
+                    System.out.println(linearsearch(arr,key));
+
+                    break;
+
+                case 3:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("ANAGRAMS");
+
+                    String s1;
+
+                    String s2;
+
+                    System.out.println("Enter string 1");
+
+                    s1= sc.next();
+
+                    System.out.println("Enter string 2");
+
+                    s2= sc.next();
+
+                    System.out.println(isAnagram(s1,s2));
+
+                    break;
+
+                case 4:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("DETECT LOOP IN A LINKED LIST");
+
+                    System.out.println("Enter number of nodes");
+
+                    size = sc.nextInt();
+
+                    LList lList= new LList();
+
+                    for (int i=0;i<size;i++)
+                        lList.addAtBegining(new LList.NodeMod(sc.nextInt()));
+
+                    System.out.println(lList.IsLoopPresent(lList));
+
+                    break;
+
+                case 5:
+
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("INSERTION SORT");
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+
+                    ArrayList<Integer> result = Insertionsort((ArrayList) Arrays.asList(arr)) ;
+
+                    for (Integer i: result)
+                        System.out.print(i+"   ");
+
+                    System.out.println();
+
+                    break;
+
+
+                case 6:
+
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("KTH SMALLEST ELEMENT");
+
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println("Enter k ");
+
+
+                    int k=sc.nextInt();
+
+                    System.out.println(kthSmallest(arr,0,arr.length-1,k));
+
+                    break;
+
+                case 7:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("SUM OF ODD LENGTH SUB ARRAYS");
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println(sumOddLengthSubarrays(arr));
+
+                    break;
+
+
+                case 8:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("FIND MIDDLE INDEX IN ARRAY");
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println(findMiddleIndex(arr));
+
+                    break;
+
+                case 9:
+                    System.out.println("Your choice: "+ choice);
+
+                    System.out.println("FIND SUBARRAYS ");
+
+                    System.out.println("Enter array size");
+
+                    size = sc.nextInt();
+
+                    System.out.println("Enter "+size+" elements");
+
+                    arr= new int[size];
+
+                    for(int i=0; i<size;i++)
+                        arr[i] = sc.nextInt();
+
+                    System.out.println(findSubarrays(arr));
+
+                    break;
+
+
+                default:
+                    System.out.println("Invalid choice");
+                    exit(0);
+            }
+        }
+
+
 
     }
 }
