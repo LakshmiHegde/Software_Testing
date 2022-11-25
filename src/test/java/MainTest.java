@@ -260,5 +260,53 @@ public class MainTest {
         Assert.assertEquals(0,main.findMiddleIndex(arr));
 
     }
+    @Test
+    public void findSubarrays_test_EC(){
+        //Edge Coverage
+        int[] arr= new int[]{2,8};
+        // Test path [1 2 3 5 2 4 6 8]
+        Assert.assertEquals(false,main.findSubarrays(arr));
+
+        arr=new int[]{5,2,4,2};
+        // Test path [1 2 4 6 7 10 6 7 9]
+        Assert.assertEquals(true,main.findSubarrays(arr));
+
+    }
+@Test
+    public void findSubarrays_test_PC(){
+
+        //Prime path coverage
+        int[] arr=new int[]{5,2,4,3};
+        //Test Path [1 2 3 5 2 3 5 2 4 6 7 10 6 7 10 6 8]
+        Assert.assertEquals(false,main.findSubarrays(arr));
+
+        arr=new int[]{2,4};
+        // Test Path [1 2 3 5 2 4 6 8]
+        Assert.assertEquals(false,main.findSubarrays(arr));
+
+        arr=new int[]{5,3,7};
+        // Test path [1 2 3 5 2 3 5 2 4 6 8]
+        Assert.assertEquals(false,main.findSubarrays(arr));
+
+        arr=new int[]{5,2,4,2};
+        //Test path [1 2 4 6 7 10 6 7 9]
+        Assert.assertEquals(true,main.findSubarrays(arr));
+
+        arr=new int[]{};
+        //Test path [1 2 4 6 8]
+        Assert.assertEquals(false,main.findSubarrays(arr));
+
+     
+        arr=new int[]{};
+        //Test path [1 2 3 5 2 3 5 2 3 5 2 4 6 7 9] side trips
+        Assert.assertEquals(true,main.findSubarrays(arr));
+
+        arr=new int[]{4,8};
+        //Test path [1 2 3 5 2 4 6 7 9]
+        Assert.assertEquals(true,main.findSubarrays(arr));
+
+
+    }
+
 
 }
