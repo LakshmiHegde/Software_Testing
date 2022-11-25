@@ -177,4 +177,41 @@ public class MainTest {
         Assert.assertEquals(true,l.IsLoopPresent(l));
 
     }
+    @Test
+    public void sumOddLengthSubarrays_test_EC(){
+        //Edge Coverage
+        int[] arr= new int[]{10,11};
+        // Test path [1 2 3 4 5 7 8 3 9 10]
+        Assert.assertEquals(21,main.sumOddLengthSubarrays(arr));
+
+        arr=new int[]{6};
+        // Test path [1 2 3 4 5 6 7 8 3 9 10]
+        Assert.assertEquals(6,main.sumOddLengthSubarrays(arr));
+
+    }
+@Test
+    public void sumOddLengthSubarrays_test_PC(){
+
+        //Prime path coverage
+        int[] arr=new int[]{4,3,1,2};
+        //Test Path [1 2 3 4 5 6 7 8 3 4 5 6 7 8 3 4 5 7 8 3 4 5 7 8 3 9 10] 
+        //Test path that it covers with side trip is
+        //[1 2 3 4 5 6 7 8 3 4 5 7 8 3 4 5 6 7 8 3 4 5 7 8 3 9 10 6 7 8 3 4 5 7 8 3 4 5 6] 
+        Assert.assertEquals(24,main.sumOddLengthSubarrays(arr));
+
+        arr=new int[]{};
+        // Test Path [1 2 3 9 10]
+        Assert.assertEquals(0,main.sumOddLengthSubarrays(arr));
+
+        arr=new int[]{6};
+        // Test path [1 2 3 4 5 6 7 8 3 9 10]
+        Assert.assertEquals(-6,main.sumOddLengthSubarrays(arr));
+
+        arr=new int[]{10,11};
+        //Test path [1 2 3 4 5 7 8 3 9 10]
+        Assert.assertEquals(21,main.sumOddLengthSubarrays(arr));
+
+       
+    }
+
 }
