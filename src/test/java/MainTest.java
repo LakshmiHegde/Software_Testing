@@ -211,7 +211,54 @@ public class MainTest {
         //Test path [1 2 3 4 5 7 8 3 9 10]
         Assert.assertEquals(21,main.sumOddLengthSubarrays(arr));
 
-       
+    }
+
+    @Test
+    public void findMiddleIndex_test_EC(){
+        //Edge Coverage
+        int[] arr= new int[]{8,10};
+        // Test path [1 2 4 6 9 10 4 7]
+        //Test path that it covers with side trip is
+        //[1 2 4 6 9 10 4 6 9 10 4 7]
+        Assert.assertEquals(-1,main.findMiddleIndex(arr));
+
+        arr=new int[]{10};
+        // Test path [1 2 3 5 2 4 6 8]
+        Assert.assertEquals(0,main.findMiddleIndex(arr));
+
+    }
+@Test
+    public void findMiddleIndex_test_PC(){
+
+        //Prime path coverage
+        int[] arr=new int[]{4,6,4};
+        //Test Path [1 2 3 5 2 3 5 2 4 6 9 10 4 6 8]
+        Assert.assertEquals(1,main.findMiddleIndex(arr));
+
+        arr=new int[]{8,10};
+        // Test Path [1 2 4 6 9 10 4 6 9 10 4 7]
+        Assert.assertEquals(-1,main.findMiddleIndex(arr));
+
+        arr=new int[]{};
+        // Test path [1 2 4 7]
+        Assert.assertEquals(-1,main.findMiddleIndex(arr));
+
+        arr=new int[]{10,2};
+        //Test path [1 2 3 5 2 4 7]
+        ////Test path that it covers with side trip is
+        //[1 2 3 5 2 3 5 2 4 6 9 10 2 4 6 9 10 4 7]
+        Assert.assertEquals(-1,main.findMiddleIndex(arr));
+
+        arr=new int[]{10};
+        //Test path [1 2 4 6 8]
+        //Test path that it covers with side trip is
+        //[1 2 3 5 2 4 6 8]
+        Assert.assertEquals(0,main.findMiddleIndex(arr));
+
+        arr=new int[]{10};
+        //Test path [1 2 3 5 2 4 6 8]
+        Assert.assertEquals(0,main.findMiddleIndex(arr));
+
     }
 
 }
